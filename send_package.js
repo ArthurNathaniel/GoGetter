@@ -1,40 +1,34 @@
 
-  // Replace these with your actual emailjs parameters
-  const YOUR_EMAILJS_SERVICE_ID = "service_0z7trao";
-  const YOUR_EMAILJS_TEMPLATE_ID = "template_9x0ykd4";
-  const YOUR_EMAILJS_USER_ID = "ncEfj2XOlmD0JyZew";
+  (function () {
+    emailjs.init("ncEfj2XOlmD0JyZew");
+  })();
 
-  function sendEmail(event) {
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
+    sendMail();
+  });
 
-    // Get form data
-    const senderName = document.getElementById('sender_name').value;
-    const senderAddress = document.getElementById('sender_address').value;
-    const senderNumber = document.getElementById('sender_number').value;
-    const senderEmail = document.getElementById('sender_email').value;
+  function sendMail() {
+    var params = {
+      sender_name: document.getElementById('sender_name').value,
+      sender_address: document.getElementById('sender_address').value,
+      sender_number: document.getElementById('sender_number').value,
+      sender_email: document.getElementById('sender_email').value,
+      recipient_name: document.getElementById('recipient_name').value,
+      recipient_address: document.getElementById('recipient_address').value,
+      recipient_number: document.getElementById('recipient_number').value,
+      recipient_email: document.getElementById('recipient_email').value,
+    };
 
-    const recipientName = document.getElementById('recipient_name').value;
-    const recipientAddress = document.getElementById('recipient_address').value;
-    const recipientNumber = document.getElementById('recipient_number').value;
-    const recipientEmail = document.getElementById('recipient_email').value;
+    const serviceID = "service_0z7trao";
+    const templateID = "template_9x0ykd4";
 
-    // Send email using emailjs
-    emailjs.send(YOUR_EMAILJS_SERVICE_ID, YOUR_EMAILJS_TEMPLATE_ID, {
-      sender_name: senderName,
-      sender_address: senderAddress,
-      sender_number: senderNumber,
-      sender_email: senderEmail,
-      recipient_name: recipientName,
-      recipient_address: recipientAddress,
-      recipient_number: recipientNumber,
-      recipient_email: recipientEmail,
-    }, YOUR_EMAILJS_USER_ID)
-      .then(function(response) {
-        console.log('Email sent successfully!', response);
-        // Optionally, display a success message or redirect to a thank-you page.
-      }, function(error) {
-        console.error('Error sending email:', error);
-        // Optionally, display an error message or handle the error in some way.
+    emailjs.send(serviceID, templateID, params)
+      .then(function (response) {
+        console.log('Email sent successfully:', response);
+        alert('Your message has been sent! We will get back to you soon.');
+      }, function (error) {
+        console.error('Email failed to send:', error);
+        alert('Sorry, there was an error sending your message. Please try again later.');
       });
   }
-
