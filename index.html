@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="GoGetter is your ultimate delivery app, offering swift and reliable service to bring your favorite goods and delights right to your doorstep with ease and efficiency.">
+    <meta name="keywords" content="delivery, app, GoGetter, swift, reliable, goods, doorstep, efficiency">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>GoGetter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar-all">
+        <div class="logo">
+
+        </div>
+        <div class="nav-items">
+            <a href="#home">Home</a>
+            <a href="#order">Send Package</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-btn">
+            <button>
+                <a href="">Call </a>
+            </button>
+        </div>
+    </div>
+    <section id="home">
+        <div class="hero">
+            <div class="text">
+                <h1>Swift & Secure Delivery Services</h1>
+                <p>
+                    Welcome to our delivery service - your trusted 
+                    partner for swift and secure package deliveries.
+                </p>
+                <div class="text-btn">
+                    <a href="#order" class="btn">Send Package</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./images/hero.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="order">
+        <div class="order-heading">
+            <h1>Send Package</h1>
+            <p>
+                Fill out the form below to Send Package and ensure your delivery 
+                reaches its destination with speed and care.
+            </p>
+        </div>
+        <div class="order-form-all">
+            <div class="order-image">
+                <img src="./images/hero.png" alt="">
+            </div>
+            <div class="order-form">
+                <form  onsubmit="sendEmail(event)">
+                    <h2>Sender's Info</h2>
+                    <div class="form">
+                        <input type="text" placeholder="Sender's Name" id="sender_name" required>
+                    </div>
+                    <div class="form">
+                        <input type="text" placeholder="Sender's Address" id="sender_address" required>
+                    </div>
+                    <div class="form">
+                        <input type="number" min="0" placeholder="Sender's Number" id="sender_number" required>
+                    </div>
+                    <div class="form">
+                        <input type="email" placeholder="Sender's Email Address" id="sender_email" required>
+                    </div>
+                    <h2>Recipient Info</h2>
+                    <div class="form">
+                        <input type="text" placeholder="Recipient Name" id="recipient_name" required>
+                    </div>
+                    <div class="form">
+                        <input type="text" placeholder="Recipient Address" id="recipient_address" required>
+                    </div>
+                    <div class="form">
+                        <input type="number" min="0" placeholder="Recipient Number" id="recipient_number" required>
+                    </div>
+                    <div class="form">
+                        <input type="email" placeholder="Recipient Email Address" id="recipient_email" required>
+                    </div>
+                    <div class="form">
+                        <button>
+                            Order
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-grid">
+            <div class="box">
+                <h1></h1>
+                <h3>Email Address</h3>
+                <p>
+                    <a href="mailto:programma200218@gmail.com">programma200218@gmail.com</a>
+                </p>
+            </div>
+            <div class="box">
+                <h1></h1>
+                <h3>Phone Number</h3>
+                <p>
+                    <a href="tel:+233 54 114 4631">+233 54 114 4631</a>
+                </p>
+            </div>
+            <div class="box">
+                <h1></h1>
+                <h3>Location</h3>
+                <p>
+                    Kumasi Technical University
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="ft-image"></div>
+        <hr>
+        <p>&copy; 2023 GoGetter. All rights reserved. | Designed by <a href="tel:+233201373156" target="_blank">
+
+            </a></p>
+    </footer>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="send_package.js"></script>
+
+</body>
+
+</html>

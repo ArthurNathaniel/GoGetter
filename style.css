@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.navbar-all {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+}
+
+.logo {
+    height: 90px;
+    width: 90px;
+    border: 2px solid #0098f7;
+    border-radius: 50%;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-items a {
+    color: #0098f7;
+    font-weight: 900;
+    margin: 20px;
+    text-decoration: none;
+
+}
+
+.nav-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn button {
+    padding: 15px 45px;
+    background-color: #0098f7;
+    border: none;
+    border-radius: 15px;
+}
+
+.nav-btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10%;
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text h1 {
+    font-size: 80px;
+    color: #ffb660;
+}
+
+.text p {
+    margin-block: 40px;
+}
+
+.btn {
+    padding: 15px 45px;
+    background-color: #0098f7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.order-form-all {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10%;
+    margin-top: 30px;
+}
+
+.order-heading {
+    margin-top: 70px;
+    padding: 0 10%;
+}
+
+.order-heading h1 {
+    text-align: center;
+    font-size: 45px;
+    color: #0098f7;
+}
+
+.order-heading p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form input {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 5%;
+    border-radius: 15px;
+    border: 2px solid #0098f7;
+}
+
+.order-form h2 {
+    margin-bottom: 20px;
+}
+
+.form button {
+    background-color: #0098f7;
+    color: #fff;
+    padding: 15px 55px;
+    border: none;
+    border-radius: 15px;
+}
+
+.order-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 10%;
+    margin-top: 70px;
+}
+
+.box {
+    width: 95%;
+    padding: 0 5%;
+    padding-block: 50px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    text-align: center;
+}
+.box p{
+    color: #3e4c6c;
+    margin-top: 20px;
+}
+.box a{
+    text-decoration: wavy;
+    color: #3e4c6c;
+}
+
+footer {
+    background-color: #3e4c6c;
+    padding: 0 10%;
+    padding-block: 50px;
+    margin-top: 70px;
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+footer hr {
+    margin-top: 30px;
+    color: #fff;
+}
+
+footer p {
+    margin-top: 30px;
+    color: #fff;
+}
+
+.ft-image {
+    border: 2px solid #fff;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
