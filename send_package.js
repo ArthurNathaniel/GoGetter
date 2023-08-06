@@ -1,6 +1,6 @@
 
   (function () {
-    emailjs.init("ncEfj2XOlmD0JyZew");
+    emailjs.init("V25YH8woz5YG7ubmw");
   })();
 
   document.getElementById('contact-form').addEventListener('submit', function (event) {
@@ -9,6 +9,18 @@
   });
 
   function sendMail() {
+    // Get the button element
+    var submitButton = document.getElementById('submit-button');
+
+    // Save the original button text
+    var originalButtonText = submitButton.innerText;
+
+    // Update the button text to "Please Wait"
+    submitButton.innerText = 'Please Wait...';
+
+    // Disable the button to prevent multiple clicks during email sending
+    submitButton.disabled = true;
+
     var params = {
       sender_name: document.getElementById('sender_name').value,
       sender_address: document.getElementById('sender_address').value,
@@ -20,15 +32,26 @@
       recipient_email: document.getElementById('recipient_email').value,
     };
 
-    const serviceID = "service_0z7trao";
-    const templateID = "template_9x0ykd4";
+    const serviceID = 'service_yoi94cf';
+    const templateID = 'template_953dmf6';
 
     emailjs.send(serviceID, templateID, params)
       .then(function (response) {
         console.log('Email sent successfully:', response);
-        alert('Your message has been sent! We will get back to you soon.');
+        // Custom success message for delivery service
+        alert('Your delivery request has been sent! We will get back to you soon with the details.');
+
+        // Restore the original button text and enable the button
+        submitButton.innerText = originalButtonText;
+        submitButton.disabled = false;
       }, function (error) {
         console.error('Email failed to send:', error);
-        alert('Sorry, there was an error sending your message. Please try again later.');
+        // Custom error message for delivery service
+        alert('Oops! There was an issue sending your delivery request. Please try again later.');
+
+        // Restore the original button text and enable the button
+        submitButton.innerText = originalButtonText;
+        submitButton.disabled = false;
       });
   }
+
