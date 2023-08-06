@@ -1,6 +1,6 @@
 
   (function () {
-    emailjs.init("V25YH8woz5YG7ubmw");
+    emailjs.init("ncEfj2XOlmD0JyZew");
   })();
 
   document.getElementById('contact-form').addEventListener('submit', function (event) {
@@ -32,8 +32,8 @@
       recipient_email: document.getElementById('recipient_email').value,
     };
 
-    const serviceID = 'service_yoi94cf';
-    const templateID = 'template_953dmf6';
+    const serviceID = "service_0z7trao";
+    const templateID = "template_9x0ykd4";
 
     emailjs.send(serviceID, templateID, params)
       .then(function (response) {
