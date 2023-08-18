@@ -25,8 +25,10 @@ body {
 .logo {
     height: 90px;
     width: 120px;
-    border: 2px solid #0098f7;
-    /* border-radius: 50%; */
+background-image: url(./images/logo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .nav-items {
@@ -211,6 +213,10 @@ footer p {
     height: 150px;
     margin: 0 auto;
     border-radius: 50%;
+    background-image: url(./images/logo.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
 }
 
 .box i {
